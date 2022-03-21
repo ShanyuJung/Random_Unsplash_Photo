@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+.landing {
+  background-color: #fff;
+  display: flex;
+}
+
+.landingText {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 1 40vw;
+  height: 100vh;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.landingText h1 {
+  display: block;
+  font-size: 4rem;
+  margin: 0;
+}
+
+.landingText h2 {
+  color: #888;
+  font-size: 1.2rem;
+  margin: 0;
+  margin-top: 0.5rem;
+}
+
+.landingImage {
+  background-image: url(https://source.unsplash.com/b5oaW2R5iks);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex: 0 1 60vw;
+  margin: 0;
+  height: 100vh;
+}
+
+.landingBtn {
+  font-size: 1.5rem;
+  padding: 0.5rem 2rem;
+  border: 1px #ccc solid;
+  border-radius: 50px;
+  margin: 2rem 0 0;
+  text-decoration: none;
+  color: #333;
+  transition: 500ms ease;
+}
+
+.landingBtn:hover {
+  background: #f4f4f4;
+}
+
+.btn {
+  padding: 0.5rem 2rem;
+  border: 1px #ccc solid;
+  display: inline-block;
+  margin: 2rem 0 0;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #333;
+  transition: background 500ms ease;
+}
+
+.btn:hover {
+  background: #f4f4f4;
+}
+
+@media (max-width: 900px) {
+  .landing {
+    display: block;
+  }
+  .landingText {
+    height: 50vh;
+  }
+  .landingImage {
+    height: 50vh;
+  }
+}

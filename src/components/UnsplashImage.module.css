@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Hurricane&family=Raleway&display=swap");
+
+.header {
+  padding: 1.5rem;
+  text-align: center;
+  background: #333;
+  color: #fff;
+}
+
+.header h2 {
+  font-family: "Raleway", sans-serif;
+  border-left: solid 1px #fff;
+  border-right: solid 1px #fff;
+  display: inline-block;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+img {
+  width: 100%;
+}
+
+.caption {
+  font-family: "Hurricane", cursive;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
