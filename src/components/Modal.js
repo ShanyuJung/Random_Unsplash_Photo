@@ -26,7 +26,10 @@ const ModalOverlay = (props) => {
 
   return (
     <div className={classes.modal}>
-      <img src={creatorInfo.urls.regular} alt="" />
+      <img src={creatorInfo.urls.regular} alt="" loading="lazy" />
+      <div className={classes.closeBtn} onClick={props.onClose}>
+        <i className="fa fa-times-circle-o fa-3x" aria-hidden="true"></i>
+      </div>
       <div className={classes.contentText}>
         {creatorInfo.description && (
           <>

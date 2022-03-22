@@ -1,6 +1,10 @@
 import classes from "./Landing.module.css";
 
-const Landing = () => {
+const Landing = (props) => {
+  // const toImageFunc = () => {
+  //   window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
+  // };
+
   return (
     <>
       <div className={classes.landing}>
@@ -9,7 +13,7 @@ const Landing = () => {
             <h1>Unsplash</h1>
           </div>
           <h2>Random Search Photography</h2>
-          <a href="#images" className={classes.landingBtn}>
+          <a className={classes.landingBtn} onClick={props.onScroll}>
             View Photos
           </a>
         </div>

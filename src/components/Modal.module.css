@@ -28,7 +28,34 @@
 
 .modal img {
   margin: 1rem;
-  width: 80%;
+  width: 75%;
+  animation-name: loadImage;
+  animation-duration: 2500ms;
+  animation-timing-function: ease-out;
+}
+
+@keyframes loadImage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.closeBtn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  color: #333;
+}
+
+.closeBtn:hover {
+  color: #ccc;
+}
+
+.contentText {
+  margin: 1rem;
 }
 
 .contentText h2 {
@@ -37,6 +64,7 @@
 }
 
 .contentText h4 {
+  padding-left: 1rem;
   margin-top: 0;
 }
 
@@ -73,14 +101,36 @@
     margin: 2.5%;
   }
   .contentText {
-    margin: 1rem;
+    margin-left: 3rem;
     margin-top: 0;
+  }
+  .closeBtn {
+    opacity: 0;
+  }
+  .closeBtn:hover {
+    opacity: 1;
   }
 }
 
 @media (max-width: 500px) {
   .modal {
     top: 20vh;
+  }
+  .modal img {
+    width: 98%;
+    margin: 1%;
+    margin-top: 2rem;
+  }
+  .closeBtn {
+    display: none;
+  }
+  .contentText {
+    margin-left: 1.5rem;
+  }
+  .icons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
   }
 }
 

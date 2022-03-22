@@ -1,5 +1,5 @@
 import classes from "./UnsplashImage.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "./Modal";
 
 const UnsplashImage = (props) => {
@@ -29,9 +29,10 @@ const UnsplashImage = (props) => {
               key={pic.id}
               alt=""
               onClick={() => showModalHandler(pic)}
+              loading="lazy"
             />
             <div className={classes.caption} key={`caption${pic.id}`}>
-              {`Photo by ${pic.user.name}`}
+              {`Create by ${pic.user.name}`}
             </div>
           </div>
         );

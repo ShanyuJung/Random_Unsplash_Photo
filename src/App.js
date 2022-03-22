@@ -6,7 +6,7 @@ import UnsplashImage from "./components/UnsplashImage";
 
 const App = () => {
   const ACCESS_KEY = "w2ZnMRGaVZDTRs6vYk7hWiMQV2UOtgTd59ZLWS9EM0c";
-  const picsNumber = "2";
+  const picsNumber = "6";
 
   const [pics, setPics] = useState([]);
 
@@ -28,21 +28,24 @@ const App = () => {
       .then((data) => {
         setPics(data);
       });
+    window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
   };
 
-  // console.log(pics);
+  const scrollToImageHandler = () => {
+    window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
+  };
 
   return (
     <div className={classes.wrapper}>
-      <Landing />
-      <div className={classes.header} id="images">
+      <Landing onScroll={scrollToImageHandler} />
+      <div className={classes.header}>
         <div className={classes.headerText}>
           <h2>Photos</h2>
           <p>Click Photos to Get More Information</p>
         </div>
       </div>
       <UnsplashImage pics={pics} />
-      <Footer onClick={reloadPhotoHandler} />
+      <Footer onReload={reloadPhotoHandler} />
     </div>
   );
 };

@@ -28,6 +28,18 @@ body {
   display: inline-block;
   padding-right: 2rem;
   padding-left: 2rem;
+  animation-name: loadHeader;
+  animation-duration: 2500ms;
+  animation-timing-function: ease-out;
+}
+
+@keyframes loadHeader {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .headerText h2 {
