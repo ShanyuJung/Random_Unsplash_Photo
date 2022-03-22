@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -9,16 +11,46 @@
 }
 
 .modal {
+  font-family: "Raleway", sans-serif;
   position: fixed;
-  top: 20vh;
+  top: 5vh;
   left: 5vw;
   width: 90vw;
   background-color: white;
-  /* padding: 1rem; */
   border-radius: 14px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   z-index: 30;
   animation: slide-down 300ms ease-out forwards;
+  display: flex;
+  align-items: flex-end;
+  overflow: scroll;
+}
+
+.modal img {
+  margin: 1rem;
+  width: 80%;
+}
+
+.contentText h2 {
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.contentText h4 {
+  margin-top: 0;
+}
+
+.contentText a {
+  color: #333;
+  margin: 0.5rem;
+}
+
+.contentText a:hover {
+  color: #ccc;
+}
+
+.icons {
+  margin-bottom: 2rem;
 }
 
 /* @media (min-width: 768px) {
@@ -27,6 +59,30 @@
     left: calc(50% - 20rem);
   }
 } */
+
+@media (max-width: 1125px) {
+  .modal {
+    display: block;
+    width: 100vw;
+    /* top: 12vh; */
+    left: 0;
+    max-height: 90vh;
+  }
+  .modal img {
+    width: 95%;
+    margin: 2.5%;
+  }
+  .contentText {
+    margin: 1rem;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .modal {
+    top: 20vh;
+  }
+}
 
 @keyframes slide-down {
   from {

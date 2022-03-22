@@ -30,6 +30,8 @@ const App = () => {
       });
   };
 
+  // console.log(pics);
+
   return (
     <div className={classes.wrapper}>
       <Landing />

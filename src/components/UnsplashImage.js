@@ -20,11 +20,7 @@ const UnsplashImage = (props) => {
 
   return (
     <>
-      {showModal && (
-        <Modal modalInfo={modalInfo} onClose={onClose}>
-          {modalInfo.id}
-        </Modal>
-      )}
+      {showModal && <Modal modalInfo={modalInfo} onClose={onClose} />}
       {props.pics.map((pic) => {
         return (
           <div key={`div${pic.id}`}>

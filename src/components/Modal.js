@@ -6,9 +6,55 @@ const Backdrop = (props) => {
 };
 
 const ModalOverlay = (props) => {
+  //   console.log(props.modalInfo.links.likes);
+  const creatorInfo = props.modalInfo;
+  const createDate = new Date(props.modalInfo.created_at);
+  const month = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
   return (
     <div className={classes.modal}>
-      <div className={classes.content}>{props.children}</div>
+      <img src={creatorInfo.urls.regular} alt="" />
+      <div className={classes.contentText}>
+        {creatorInfo.description && (
+          <>
+            <h2>Description</h2>
+            <h4>{creatorInfo.description}</h4>
+          </>
+        )}
+        <h3>{`Create by ${creatorInfo.user.name}`}</h3>
+        <h3>{`Published at ${
+          month[createDate.getMonth()]
+        }-${createDate.getDate()}-${createDate.getFullYear()}`}</h3>
+        <div className={classes.icons}>
+          <a href={creatorInfo.user.links.html} target="_blank">
+            <i className="fa fa-user-circle fa-2x" aria-hidden="true"></i>
+          </a>
+          <a href={creatorInfo.links.html} target="_blank">
+            <i className="fa fa-camera fa-2x" aria-hidden="true"></i>
+          </a>
+          {creatorInfo.user.instagram_username && (
+            <a
+              href={`https://www.instagram.com/${creatorInfo.user.instagram_username}/`}
+              target="_blank"
+            >
+              <i className="fa fa-instagram fa-2x" aria-hidden="true"></i>
+            </a>
+          )}
+        </div>
+      </div>
     </div>
   );
 };
@@ -23,7 +69,7 @@ const Modal = (props) => {
         portalElement
       )}
       {ReactDOM.createPortal(
-        <ModalOverlay>{props.children}</ModalOverlay>,
+        <ModalOverlay onClose={props.onClose} modalInfo={props.modalInfo} />,
         portalElement
       )}
     </>
