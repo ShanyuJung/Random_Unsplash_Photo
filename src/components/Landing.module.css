@@ -55,9 +55,11 @@
 
 @keyframes imageLoading {
   0% {
+    opacity: 0;
     flex: 0 1 0vw;
   }
   100% {
+    opacity: 1;
     flex: 0 1 60vw;
   }
 }
@@ -73,9 +75,12 @@
 
 @keyframes imageLoadingMobile {
   0% {
+    opacity: 0;
+
     height: 0vh;
   }
   100% {
+    opacity: 1;
     height: 50vh;
   }
 }
