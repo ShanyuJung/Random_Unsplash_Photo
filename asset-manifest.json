@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/hweidhwodhewo/static/css/main.4c8e8b8a.css",
+    "main.js": "/hweidhwodhewo/static/js/main.e04a4c0c.js",
+    "static/js/787.58f764ca.chunk.js": "/hweidhwodhewo/static/js/787.58f764ca.chunk.js",
+    "index.html": "/hweidhwodhewo/index.html",
+    "main.4c8e8b8a.css.map": "/hweidhwodhewo/static/css/main.4c8e8b8a.css.map",
+    "main.e04a4c0c.js.map": "/hweidhwodhewo/static/js/main.e04a4c0c.js.map",
+    "787.58f764ca.chunk.js.map": "/hweidhwodhewo/static/js/787.58f764ca.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4c8e8b8a.css",
+    "static/js/main.e04a4c0c.js"
+  ]
+}
