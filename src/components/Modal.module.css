@@ -34,6 +34,7 @@
   animation-name: loadImage;
   animation-duration: 2500ms;
   animation-timing-function: ease-out;
+  cursor: default;
 }
 
 @keyframes loadImage {
@@ -50,6 +51,7 @@
   top: 1rem;
   right: 1rem;
   color: #333;
+  cursor: pointer;
 }
 
 .closeBtn:hover {

@@ -5,6 +5,7 @@ img {
   animation-name: loadImage;
   animation-duration: 2500ms;
   animation-timing-function: ease-out;
+  cursor: pointer;
 }
 
 @keyframes loadImage {

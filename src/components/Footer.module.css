@@ -35,6 +35,7 @@
   color: #333;
   transition: 500ms ease;
   background: #eee;
+  cursor: pointer;
 }
 
 .landingBtn:hover {

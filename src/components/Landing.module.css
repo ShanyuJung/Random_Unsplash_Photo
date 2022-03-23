@@ -94,6 +94,7 @@
   text-decoration: none;
   color: #333;
   transition: 500ms ease;
+  cursor: pointer;
 }
 
 .landingBtn:hover {
