@@ -27,8 +27,9 @@ const App = () => {
       .then((res) => res.json())
       .then((data) => {
         setPics(data);
+        // console.log(data);
+        window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
       });
-    window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
   };
 
   const scrollToImageHandler = () => {
