@@ -9,7 +9,7 @@
   font-family: "Raleway", sans-serif;
   display: flex;
   flex-wrap: wrap;
-  flex: 0 1 40vw;
+  flex: 0 1 100vw;
   height: 100vh;
   text-align: center;
   justify-content: center;
@@ -39,7 +39,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  flex: 0 1 60vw;
+  flex: 0 1 0vw;
   margin: 0;
   height: 100vh;
 }
@@ -118,20 +118,19 @@
 
 @media (min-width: 900px) {
   .landingText {
+    flex: 0 1 40vw;
+    margin: 0;
+    height: 100vh;
     animation-name: pageLoading;
-    animation-duration: 2000ms;
+    animation-duration: 3000ms;
     animation-timing-function: ease-out;
   }
   .landingImage {
-    background-image: url(https://source.unsplash.com/b5oaW2R5iks);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     flex: 0 1 60vw;
     margin: 0;
     height: 100vh;
     animation-name: imageLoading;
-    animation-duration: 2000ms;
+    animation-duration: 3000ms;
     animation-timing-function: ease-out;
   }
 }

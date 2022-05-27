@@ -6,6 +6,7 @@
 
 .imgContainer {
   min-height: 500px;
+  width: 100%;
   position: relative;
 }
 
@@ -16,10 +17,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("../../assets/loading.gif");
+  background: url("../../assets/loadingSpinner.gif");
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #fff;
+  background-color: #eee;
 }
 
 .loading {
@@ -55,4 +56,10 @@
   animation-name: loadImage;
   animation-duration: 2500ms;
   animation-timing-function: ease-out;
+}
+
+@media (max-width: 900px) {
+  .imgContainer {
+    min-height: 180px;
+  }
 }

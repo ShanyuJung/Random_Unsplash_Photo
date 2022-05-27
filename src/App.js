@@ -6,7 +6,7 @@ import UnsplashImage from "./components/UnsplashImage";
 
 const App = () => {
   const ACCESS_KEY = "w2ZnMRGaVZDTRs6vYk7hWiMQV2UOtgTd59ZLWS9EM0c";
-  const picsNumber = "1";
+  const picsNumber = "6";
 
   const [pics, setPics] = useState([]);
 
@@ -17,7 +17,7 @@ const App = () => {
       .then((res) => res.json())
       .then((data) => {
         setPics(data);
-        console.log(data);
+        // console.log(data);
       });
   }, []);
 
