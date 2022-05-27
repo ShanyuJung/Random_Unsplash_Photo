@@ -122,7 +122,7 @@
     margin: 0;
     height: 100vh;
     animation-name: pageLoading;
-    animation-duration: 3000ms;
+    animation-duration: 3200ms;
     animation-timing-function: ease-out;
   }
   .landingImage {
@@ -130,7 +130,7 @@
     margin: 0;
     height: 100vh;
     animation-name: imageLoading;
-    animation-duration: 3000ms;
+    animation-duration: 3200ms;
     animation-timing-function: ease-out;
   }
 }

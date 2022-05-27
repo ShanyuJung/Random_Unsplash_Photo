@@ -11,3 +11,7 @@ The modal would show information of clicked photo.
 ## Load new photo
 
 User could load 6 new photo by click "Load New Random Photos" button.
+
+## Lazy Loading
+
+Lazy loading images and use spinner placeholder to upgrade user experience for waiting image loading while Internet is slow.
