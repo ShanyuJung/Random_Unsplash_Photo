@@ -6,7 +6,7 @@ import UnsplashImage from "./components/UnsplashImage";
 
 const App = () => {
   const ACCESS_KEY = "w2ZnMRGaVZDTRs6vYk7hWiMQV2UOtgTd59ZLWS9EM0c";
-  const picsNumber = "6";
+  const picsNumber = "1";
 
   const [pics, setPics] = useState([]);
 
@@ -17,10 +17,12 @@ const App = () => {
       .then((res) => res.json())
       .then((data) => {
         setPics(data);
+        console.log(data);
       });
   }, []);
 
   const reloadPhotoHandler = () => {
+    window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
     fetch(
       `https://api.unsplash.com/photos/random/?client_id=${ACCESS_KEY}&count=${picsNumber}&orientation=landscape&query=`
     )
@@ -28,7 +30,6 @@ const App = () => {
       .then((data) => {
         setPics(data);
         // console.log(data);
-        window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
       });
   };
 
